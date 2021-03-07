@@ -13,8 +13,6 @@ import matplotlib.pyplot as plt
 rows = 10000
 cols = 10000
 iterations = 150
-x = 1000
-y = 1000
 
 def julia(c, z):
     global iterations
@@ -40,11 +38,11 @@ def julia_set(x, y):
             output[i, j] = count
     return output
     
-x_cor = np.linspace(-2, 2, rows)
-y_cor = np.linspace(-2, 2, cols)
+x = np.linspace(-2, 2, rows)
+y = np.linspace(-2, 2, cols)
 
 
-j = julia_set(x_cor, y_cor)
+j = julia_set(x, y)
 
 # show the set (best colors: binary, hot, bone, magma)
 plt.imshow(j.T, cmap='magma')
